@@ -31,6 +31,7 @@ assert 'src="assets/' not in html and 'url("assets/' not in html
 output = ROOT / 'dist'
 output.mkdir(exist_ok=True)
 (output / 'index.html').write_text(html)
+(ROOT / 'cheff-comodo.html').write_text(html)
 with zipfile.ZipFile(ROOT / 'cheff-comodo-web.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
     archive.writestr('index.html', html)
     archive.writestr('LEEME.txt', 'CHEFF COMODO\n\nExtrae index.html y abrelo con Chrome, Edge, Firefox o Safari.\nEl diseno, las imagenes y los botones estan integrados en ese unico archivo.\nNo necesita otras carpetas ni conexion a Internet. Llamadas y Google Maps requieren sus servicios habituales.\nSi tu gestor de archivos solo muestra una vista previa, elige Abrir con un navegador.\n')
