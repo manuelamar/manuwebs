@@ -22,8 +22,8 @@ css, gallery_declarations = re.subn(r':root\{--gallery-image:url\("assets/galler
 assert gallery_declarations == 1, 'Gallery variable declaration changed'
 css = css.replace('var(--gallery-image)', 'url("' + inline_asset('assets/gallery.png') + '")')
 css = re.sub(r'''url\(["']?(assets/[^\s\)"']+)["']?\)''', lambda m: 'url("' + inline_asset(m[1]) + '")', css)
-html, stylesheet_count = re.subn(r'<link rel="stylesheet" href="styles.css">', lambda _: '<style>' + css + '</style>', html)
-html, script_count = re.subn(r'<script src="app.js" defer></script>', '', html)
+html, stylesheet_count = re.subn(r'<link rel="stylesheet" href="styles\.css(?:\?[^"]*)?">', lambda _: '<style>' + css + '</style>', html)
+html, script_count = re.subn(r'<script src="app\.js(?:\?[^"]*)?" defer></script>', '', html)
 assert stylesheet_count == script_count == 1, 'Source HTML format changed; update exporter'
 html = re.sub(r'(src|href)="(assets/[^\"]+)"', lambda m: m[1] + '="' + inline_asset(m[2]) + '"', html)
 html = html.replace('</body>', '<script>' + (ROOT / 'app.js').read_text() + '</script></body>')

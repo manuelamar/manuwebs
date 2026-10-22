@@ -34,14 +34,10 @@ const todayRow = document.querySelector(`.opening-hours [data-day="${businessDay
 if (todayRow) todayRow.classList.add('today');
 const photoDialog = document.querySelector('.photo-dialog');
 const enlargedPhoto = document.querySelector('.dialog-photo');
-const photoZoom = document.querySelector('#photo-zoom');
 let lastPhotoButton;
 document.querySelectorAll('.gallery-item').forEach(button => {
   button.addEventListener('click', () => {
     lastPhotoButton = button;
-    photoZoom.hidden = button.dataset.origin !== 'menu-original';
-    photoZoom.setAttribute('aria-pressed', 'false');
-    photoZoom.textContent = 'Ampliar para leer';
     const originalPhoto = button.querySelector('img');
     enlargedPhoto.replaceChildren();
     enlargedPhoto.style.backgroundImage = originalPhoto ? 'none' : '';
@@ -60,8 +56,7 @@ document.querySelectorAll('.gallery-item').forEach(button => {
       source.rel = 'noopener noreferrer';
       source.textContent = 'Fuente: galería de Cheff Cómodo en Restaurant Guru. Disponibilidad a consultar con el bar.';
       note.append(source);
-    } else if (button.dataset.origin === 'menu-original') {
-      note.textContent = 'Fotografía original de la carta facilitada por el bar. Puedes ampliarla para leerla o descargarla desde la sección de la carta.';
+
     } else {
       note.textContent = 'Versión adaptada de la fotografía facilitada.';
     }
@@ -77,8 +72,39 @@ photoDialog.addEventListener('click', event => {
 });
 photoDialog.addEventListener('close', () => lastPhotoButton?.focus());
 
-photoZoom.addEventListener('click', () => {
-  const zoomed = enlargedPhoto.classList.toggle('zoomed');
-  photoZoom.setAttribute('aria-pressed', String(zoomed));
-  photoZoom.textContent = zoomed ? 'Ver página completa' : 'Ampliar para leer';
+
+// Señala la sección visible; los enlaces siguen funcionando como anclas nativas.
+const sectionLinks = [...navigation.querySelectorAll('a[href^="#"]')];
+const pageSections = [...document.querySelectorAll('main > section[id]')];
+let navigationFramePending = false;
+function updateCurrentSection() {
+  const headerBottom = document.querySelector('.header').getBoundingClientRect().bottom;
+  const anchorOffset = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+  const threshold = Math.max(headerBottom + 24, anchorOffset + 32);
+  let current = pageSections[0].id;
+  for (const section of pageSections) {
+    if (section.getBoundingClientRect().top <= threshold) current = section.id;
+  }
+  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8) {
+    current = pageSections[pageSections.length - 1].id;
+  }
+  for (const link of sectionLinks) {
+    const active = link.hash === `#${current}`;
+    link.classList.toggle('is-current', active);
+    if (active) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  }
+  navigationFramePending = false;
+}
+window.addEventListener('scroll', () => {
+  if (!navigationFramePending) {
+    navigationFramePending = true;
+    requestAnimationFrame(updateCurrentSection);
+  }
+}, { passive: true });
+window.addEventListener('resize', () => {
+  if (window.matchMedia('(min-width: 1101px)').matches) closeMenu();
+  updateCurrentSection();
 });
+window.addEventListener('load', updateCurrentSection);
+updateCurrentSection();

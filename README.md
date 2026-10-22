@@ -58,4 +58,8 @@ Para regenerar el paquete después de editar la web: `python3 scripts/export_net
 
 `assets/menu.json` recoge 30 opciones: 7 bocadillos, 3 hamburguesas, 2 tostadas, 3 ensaladas, 10 raciones y 5 platos especiales. Los precios se guardan en céntimos y proceden de las dos fotos aportadas. Se normalizan acentos y redacción sin cambiar ingredientes ni cantidades. No se inventan alérgenos ni ofertas.
 
-Los originales sin editar están en `assets/carta-bocadillos.jpg` y `assets/carta-raciones.jpg`, con ampliación, zoom y descarga desde la web. Para reflejar cambios del JSON en el HTML: `python3 scripts/update_menu.py`. Después regenera las descargas: `python3 scripts/export_download.py` y `python3 scripts/export_netlify.py`.
+Los originales sin editar se conservan como fuente de transcripción en `assets/carta-bocadillos.jpg` y `assets/carta-raciones.jpg`. A petición del usuario, no se muestran ni enlazan en la web y no se incluyen en los paquetes de descarga actualizados. Para reflejar cambios del JSON en el HTML: `python3 scripts/update_menu.py`. Después regenera las descargas: `python3 scripts/export_download.py` y `python3 scripts/export_netlify.py`.
+
+## Navegación por secciones
+
+La cabecera permanece visible e incluye enlaces a Inicio, El bar, Carta, Fotos, Terraza y deportes, Contacto y horarios, y Reservas. En móvil y tablet se abre mediante un botón «Menú», se cierra al elegir una sección o pulsar Escape y destaca la sección visible. Las anclas respetan la altura de la cabecera.
