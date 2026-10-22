@@ -2,6 +2,12 @@
 
 Web estática adaptable a móvil. HTML, CSS y JavaScript, sin dependencias de compilación.
 
+## Descargar y abrir
+
+`cheff-comodo-web.zip` contiene un `index.html` autosuficiente: incluye el diseño, las imágenes y los botones. Extrae ese archivo y ábrelo con Chrome, Edge, Firefox o Safari. No necesita carpetas adicionales ni conexión a Internet para mostrar el contenido. La vista previa del gestor de archivos puede no ejecutar páginas web: usa un navegador.
+
+Para regenerar la descarga después de editar el código: `python3 scripts/export_download.py`. El HTML generado también queda en `dist/index.html`.
+
 ## Desarrollo
 
 Desde `/workspace/manuwebs`:
