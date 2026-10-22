@@ -19,9 +19,11 @@ document.querySelectorAll('.filter').forEach(button => {
       filter.classList.toggle('active', active);
       filter.setAttribute('aria-pressed', String(active));
     });
-    document.querySelectorAll('.food-card').forEach(card => {
-      card.hidden = button.dataset.filter !== 'todos' && card.dataset.category !== button.dataset.filter;
+    document.querySelectorAll('.menu-category').forEach(category => {
+      category.hidden = button.dataset.filter !== 'todos' && category.dataset.category !== button.dataset.filter;
     });
+    const visibleItems = [...document.querySelectorAll('.menu-category:not([hidden]) .menu-item')].length;
+    document.querySelector('#menu-status').textContent = `${button.textContent.trim()}: ${visibleItems} opciones.`;
   });
 });
 document.querySelector('#year').textContent = new Date().getFullYear();
@@ -32,10 +34,14 @@ const todayRow = document.querySelector(`.opening-hours [data-day="${businessDay
 if (todayRow) todayRow.classList.add('today');
 const photoDialog = document.querySelector('.photo-dialog');
 const enlargedPhoto = document.querySelector('.dialog-photo');
+const photoZoom = document.querySelector('#photo-zoom');
 let lastPhotoButton;
 document.querySelectorAll('.gallery-item').forEach(button => {
   button.addEventListener('click', () => {
     lastPhotoButton = button;
+    photoZoom.hidden = button.dataset.origin !== 'menu-original';
+    photoZoom.setAttribute('aria-pressed', 'false');
+    photoZoom.textContent = 'Ampliar para leer';
     const originalPhoto = button.querySelector('img');
     enlargedPhoto.replaceChildren();
     enlargedPhoto.style.backgroundImage = originalPhoto ? 'none' : '';
@@ -54,6 +60,8 @@ document.querySelectorAll('.gallery-item').forEach(button => {
       source.rel = 'noopener noreferrer';
       source.textContent = 'Fuente: galería de Cheff Cómodo en Restaurant Guru. Disponibilidad a consultar con el bar.';
       note.append(source);
+    } else if (button.dataset.origin === 'menu-original') {
+      note.textContent = 'Fotografía original de la carta facilitada por el bar. Puedes ampliarla para leerla o descargarla desde la sección de la carta.';
     } else {
       note.textContent = 'Versión adaptada de la fotografía facilitada.';
     }
@@ -68,3 +76,9 @@ photoDialog.addEventListener('click', event => {
   if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) photoDialog.close();
 });
 photoDialog.addEventListener('close', () => lastPhotoButton?.focus());
+
+photoZoom.addEventListener('click', () => {
+  const zoomed = enlargedPhoto.classList.toggle('zoomed');
+  photoZoom.setAttribute('aria-pressed', String(zoomed));
+  photoZoom.textContent = zoomed ? 'Ver página completa' : 'Ampliar para leer';
+});

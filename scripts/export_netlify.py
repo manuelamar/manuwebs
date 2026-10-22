@@ -12,7 +12,7 @@ html = (ROOT / 'index.html').read_text()
 css = (ROOT / 'styles.css').read_text()
 assets = set(re.findall(r'''(?:src|href)=["'](assets/[^"']+)["']''', html))
 assets.update(re.findall(r'''url\(["']?(assets/[^\s)"']+)["']?\)''', css))
-assets.add('assets/photo-sources.json')
+assets.update(['assets/photo-sources.json', 'assets/menu.json'])
 files = ['index.html', 'styles.css', 'app.js', *sorted(assets)]
 for name in files:
     source = (ROOT / name).resolve()

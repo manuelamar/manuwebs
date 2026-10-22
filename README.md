@@ -30,7 +30,7 @@ Verificación interna: `curl -f http://127.0.0.1:8000/` y `node --check app.js`.
 - Domingo: cerrado.
 - Terraza y espacio ideal para ver deportes.
 
-La web incluye una sección para reservar mesa por teléfono, accesos desde la portada, la navegación y la barra móvil, enlaces para llamar, indicaciones de Google Maps, horario semanal, galería ampliable, navegación móvil y filtros de carta. El día del horario se destaca usando Europe/Madrid; no se afirma disponibilidad en tiempo real.
+La web incluye una sección para reservar mesa por teléfono, accesos desde la portada, la navegación y la barra móvil, enlaces para llamar, indicaciones de Google Maps, horario semanal, galería ampliable, navegación móvil y una carta real de 30 opciones con precios, ingredientes y filtros por categoría. El día del horario se destaca usando Europe/Madrid; no se afirma disponibilidad en tiempo real.
 
 ## Imágenes
 
@@ -38,7 +38,7 @@ Los adjuntos se podían ver en el chat pero no estaban disponibles como archivos
 
 ## Pendiente
 
-Carta real, precios, alérgenos y archivos originales de las fotografías y el logo. Las reservas se gestionan exclusivamente por llamada al 976 97 95 85. No hay agenda, formulario ni recogida de solicitudes en la web. Los horarios de cocina y la disponibilidad se confirman con el bar. La web de referencia no se pudo consultar por la política de red.
+Información de alérgenos y archivos originales del logo y de las fotografías adaptadas del local. La carta y los precios ya están transcritos de las dos fotografías facilitadas por el usuario. Las reservas se gestionan exclusivamente por llamada al 976 97 95 85. No hay agenda, formulario ni recogida de solicitudes en la web. Los horarios de cocina y la disponibilidad se confirman con el bar. La web de referencia no se pudo consultar por la política de red.
 
 ## Facebook
 
@@ -53,3 +53,9 @@ Fuente: https://es.restaurantguru.com/Comodo-Garrapinillos . Se han añadido sei
 Descarga `cheff-comodo-netlify.zip` y descomprímelo. Arrastra la carpeta `cheff-comodo-netlify`, la que contiene `index.html`, a https://app.netlify.com/drop . Incluye HTML, CSS, JavaScript, las imágenes utilizadas y `netlify.toml`; no necesita compilación ni variables de entorno. Conserva la estructura de carpetas.
 
 Para regenerar el paquete después de editar la web: `python3 scripts/export_netlify.py`. La carpeta generada se ignora en Git y se entrega dentro del ZIP.
+
+## Carta original facilitada por el bar
+
+`assets/menu.json` recoge 30 opciones: 7 bocadillos, 3 hamburguesas, 2 tostadas, 3 ensaladas, 10 raciones y 5 platos especiales. Los precios se guardan en céntimos y proceden de las dos fotos aportadas. Se normalizan acentos y redacción sin cambiar ingredientes ni cantidades. No se inventan alérgenos ni ofertas.
+
+Los originales sin editar están en `assets/carta-bocadillos.jpg` y `assets/carta-raciones.jpg`, con ampliación, zoom y descarga desde la web. Para reflejar cambios del JSON en el HTML: `python3 scripts/update_menu.py`. Después regenera las descargas: `python3 scripts/export_download.py` y `python3 scripts/export_netlify.py`.

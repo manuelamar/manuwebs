@@ -1,0 +1,185 @@
+{
+  "source": "Carta facilitada por el usuario en dos fotografías originales",
+  "received": "2026-10-22",
+  "source_images": [
+    "assets/carta-bocadillos.jpg",
+    "assets/carta-raciones.jpg"
+  ],
+  "categories": [
+    {
+      "id": "bocadillos",
+      "title": "Bocadillos",
+      "items": [
+        {
+          "name": "Del Bosque",
+          "description": "Bistec, queso y pimiento verde.",
+          "price_cents": 950
+        },
+        {
+          "name": "Casillas",
+          "description": "Longaniza, queso, pimiento verde, huevo y salsa de tomate.",
+          "price_cents": 900
+        },
+        {
+          "name": "Iniesta",
+          "description": "Salmón, lechuga, queso crema, salsa tártara y guacamole.",
+          "price_cents": 950
+        },
+        {
+          "name": "Xavi",
+          "description": "Solomillo, mousse de foie, pimiento del piquillo, queso y huevo a la plancha.",
+          "price_cents": 950
+        },
+        {
+          "name": "Puyol",
+          "description": "Papada, jamón, queso y pimiento verde.",
+          "price_cents": 900
+        },
+        {
+          "name": "Ramos",
+          "description": "Calamares a la andaluza y mayo-picante.",
+          "price_cents": 800
+        },
+        {
+          "name": "Busquets",
+          "description": "Salchicha Cervela con cebolla crujiente y caramelizada y salsa de miel y mostaza.",
+          "price_cents": 800
+        }
+      ]
+    },
+    {
+      "id": "hamburguesas",
+      "title": "Hamburguesas",
+      "items": [
+        {
+          "name": "Alonso",
+          "description": "Burger, bacon, huevo, queso, lechuga y tomate.",
+          "price_cents": 1250
+        },
+        {
+          "name": "Piqué",
+          "description": "Burger, queso de cabra en crema, bacon confitado, rúcula y canónigos.",
+          "price_cents": 1250
+        },
+        {
+          "name": "Pedro",
+          "description": "Burger de pollo crujiente, pepinillo, miel, queso edam, bacon crujiente y mayonesa.",
+          "price_cents": 1250
+        }
+      ]
+    },
+    {
+      "id": "tostadas",
+      "title": "Tostadas",
+      "items": [
+        {
+          "name": "Capdevila",
+          "description": "Tostada de salmón ahumado, queso crema, lechuga, guacamole, huevo duro y tártara.",
+          "price_cents": 950
+        },
+        {
+          "name": "Villa",
+          "description": "Tostada de tortilla francesa, pan con tomate, jamón o anchoas.",
+          "price_cents": 950
+        }
+      ]
+    },
+    {
+      "id": "ensaladas",
+      "title": "Ensaladas",
+      "items": [
+        {
+          "name": "Queso de cabra",
+          "description": "Lechuga variada, queso de cabra, setas, cebolla frita y vinagreta de miel.",
+          "price_cents": 1350
+        },
+        {
+          "name": "Tomate con burrata",
+          "description": "Tomate rosa, queso de burrata, pesto y tomate seco.",
+          "price_cents": 1350
+        },
+        {
+          "name": "Ensalada ilustrada",
+          "description": "Lechuga variada, tomate, atún, huevo duro, espárragos y aceitunas.",
+          "price_cents": 1650
+        }
+      ]
+    },
+    {
+      "id": "raciones",
+      "title": "Raciones",
+      "items": [
+        {
+          "name": "Patatas bravas",
+          "price_cents": 750
+        },
+        {
+          "name": "Calamares a la andaluza",
+          "price_cents": 950
+        },
+        {
+          "name": "Puntillas con pimientos de Padrón",
+          "price_cents": 950
+        },
+        {
+          "name": "Tiras de pollo",
+          "price_cents": 800
+        },
+        {
+          "name": "Pescaditos",
+          "price_cents": 850
+        },
+        {
+          "name": "Ensaladilla del chef",
+          "price_cents": 850
+        },
+        {
+          "name": "Surtido de empanadillas",
+          "price_cents": 900
+        },
+        {
+          "name": "Tabla de queso con confitura y frutos secos",
+          "price_cents": 1500
+        },
+        {
+          "name": "Alitas de pollo crujiente",
+          "description": "Con 2 salsas.",
+          "price_cents": 900
+        },
+        {
+          "name": "Huevos rotos",
+          "description": "A elegir: panceta ibérica, chorizo, longaniza, gulas y gambas.",
+          "price_cents": 1150
+        }
+      ]
+    },
+    {
+      "id": "especiales",
+      "title": "Platos especiales",
+      "items": [
+        {
+          "name": "Sepia a la plancha",
+          "price_cents": 1300
+        },
+        {
+          "name": "Bacalao a la riojana",
+          "price_cents": 1200
+        },
+        {
+          "name": "Entrecot a la plancha",
+          "price_cents": 1350
+        },
+        {
+          "name": "Chuletón de ternera",
+          "description": "De 500 g.",
+          "price_cents": 2300
+        },
+        {
+          "name": "Bacalao dorado",
+          "description": "Revuelto de bacalao, cebolla y ajo con patatas paja y huevo.",
+          "price_cents": 850
+        }
+      ]
+    }
+  ]
+}

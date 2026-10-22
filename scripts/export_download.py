@@ -25,9 +25,9 @@ css = re.sub(r'''url\(["']?(assets/[^\s\)"']+)["']?\)''', lambda m: 'url("' + in
 html, stylesheet_count = re.subn(r'<link rel="stylesheet" href="styles.css">', lambda _: '<style>' + css + '</style>', html)
 html, script_count = re.subn(r'<script src="app.js" defer></script>', '', html)
 assert stylesheet_count == script_count == 1, 'Source HTML format changed; update exporter'
-html = re.sub(r'src="(assets/[^\"]+)"', lambda m: 'src="' + inline_asset(m[1]) + '"', html)
+html = re.sub(r'(src|href)="(assets/[^\"]+)"', lambda m: m[1] + '="' + inline_asset(m[2]) + '"', html)
 html = html.replace('</body>', '<script>' + (ROOT / 'app.js').read_text() + '</script></body>')
-assert 'src="assets/' not in html and 'url("assets/' not in html
+assert 'src="assets/' not in html and 'href="assets/' not in html and 'url("assets/' not in html
 output = ROOT / 'dist'
 output.mkdir(exist_ok=True)
 (output / 'index.html').write_text(html)
