@@ -1,6 +1,6 @@
 # Cheff Cómodo · Web del bar
 
-Web estática adaptable a móvil. HTML, CSS y JavaScript, sin dependencias de compilación.
+Web estática adaptable a móvil. Diseño actual con tipografía de palo seco, negro y rojo teja, fotografías grandes y accesos a reservas. HTML, CSS y JavaScript, sin dependencias de compilación.
 
 ## Descargar y abrir
 
@@ -28,7 +28,7 @@ Verificación interna: `curl -f http://127.0.0.1:8000/` y `node --check app.js`.
 - Domingo: cerrado.
 - Terraza y espacio ideal para ver deportes.
 
-La web incluye enlaces para llamar, indicaciones de Google Maps, horario semanal, galería ampliable, navegación móvil y filtros de carta. El día del horario se destaca usando Europe/Madrid; no se afirma disponibilidad en tiempo real.
+La web incluye una sección para reservar mesa por teléfono, accesos desde la portada, la navegación y la barra móvil, enlaces para llamar, indicaciones de Google Maps, horario semanal, galería ampliable, navegación móvil y filtros de carta. El día del horario se destaca usando Europe/Madrid; no se afirma disponibilidad en tiempo real.
 
 ## Imágenes
 
@@ -36,4 +36,8 @@ Los adjuntos se podían ver en el chat pero no estaban disponibles como archivos
 
 ## Pendiente
 
-Carta real, precios, alérgenos y archivos originales de las fotografías y el logo. No hay reservas ni formularios conectados. La web de referencia no se pudo consultar por la política de red.
+Carta real, precios, alérgenos y archivos originales de las fotografías y el logo. La sección de reservas ofrece llamada directa al 976 97 95 85 y una agenda para preparar comida o cena, fecha, hora preferida y número de personas. La agenda muestra un resumen que se debe confirmar por teléfono, sin presentar la selección como una reserva recibida. Valida fechas pasadas, domingo cerrado y cenas de lunes a miércoles. Los horarios de cocina y disponibilidad real deben confirmarse con el bar. Las reservas requieren confirmación del bar; no se guardan ni envían solicitudes desde la web. No hay formularios conectados. La web de referencia no se pudo consultar por la política de red.
+
+## Facebook
+
+Página facilitada por el usuario: https://www.facebook.com/p/Bar-Cheff-C%C3%B3modo-100087839375241/ . La vista pública confirma el nombre y la dirección y contiene «Ven a disfrutar y sobre todo a comer». Se incorpora un acceso directo y esa idea en la presentación. No se han podido leer publicaciones suficientes para inferir platos, ofertas o cambios de horario.
