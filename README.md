@@ -32,12 +32,16 @@ La web incluye una sección para reservar mesa por teléfono, accesos desde la p
 
 ## Imágenes
 
-Los adjuntos se podían ver en el chat pero no estaban disponibles como archivos originales en el entorno. `assets/logo.png`, `assets/cristalera.png` y `assets/gallery.png` son versiones adaptadas mediante generación de imagen a partir de los adjuntos. No son los archivos originales y pueden tener diferencias. La web lo indica. Sustituir por los originales antes de la versión definitiva. La galería usa cuatro cuadrantes de un único archivo.
+Los adjuntos se podían ver en el chat pero no estaban disponibles como archivos originales en el entorno. `assets/logo.png`, `assets/cristalera.png` y `assets/gallery.png` son versiones adaptadas mediante generación de imagen a partir de los adjuntos. No son los archivos originales y pueden tener diferencias. La web lo indica. Sustituir por los originales antes de la versión definitiva. Solo las imágenes adaptadas del local usan cuadrantes del archivo gallery.png. Las fotografías de platos son archivos JPEG individuales, sin generar ni retocar, descargados de la galería pública de Cheff Cómodo en Restaurant Guru; se ha contrastado el negocio por dirección y teléfono. Se conservan las marcas que contiene la fuente. assets/photo-sources.json registra la página, URL de imagen, identificador y hash de cada archivo. La galería y cada ampliación enlazan a la fuente. No implican disponibilidad actual de esos platos.
 
 ## Pendiente
 
-Carta real, precios, alérgenos y archivos originales de las fotografías y el logo. La sección de reservas ofrece llamada directa al 976 97 95 85 y una agenda para preparar comida o cena, fecha, hora preferida y número de personas. La agenda muestra un resumen que se debe confirmar por teléfono, sin presentar la selección como una reserva recibida. Valida fechas pasadas, domingo cerrado y cenas de lunes a miércoles. Los horarios de cocina y disponibilidad real deben confirmarse con el bar. Las reservas requieren confirmación del bar; no se guardan ni envían solicitudes desde la web. No hay formularios conectados. La web de referencia no se pudo consultar por la política de red.
+Carta real, precios, alérgenos y archivos originales de las fotografías y el logo. Las reservas se gestionan exclusivamente por llamada al 976 97 95 85. No hay agenda, formulario ni recogida de solicitudes en la web. Los horarios de cocina y la disponibilidad se confirman con el bar. La web de referencia no se pudo consultar por la política de red.
 
 ## Facebook
 
 Página facilitada por el usuario: https://www.facebook.com/p/Bar-Cheff-C%C3%B3modo-100087839375241/ . La vista pública confirma el nombre y la dirección y contiene «Ven a disfrutar y sobre todo a comer». Se incorpora un acceso directo y esa idea en la presentación. No se han podido leer publicaciones suficientes para inferir platos, ofertas o cambios de horario.
+
+## Fotos de platos encontradas en Internet
+
+Fuente: https://es.restaurantguru.com/Comodo-Garrapinillos . Se han añadido seis fotografías nuevas (pescado, pulpo, arroz, aguacate y dos postres) y se han sustituido las versiones generadas de ensaladilla y huevos por fotografías de la misma galería. Los JPEG se conservaron sin alteraciones. Los horarios del directorio difieren de los facilitados por el usuario: se mantienen los del usuario.

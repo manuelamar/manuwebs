@@ -1,0 +1,82 @@
+[
+  {
+    "file": "assets/huevos.jpg",
+    "caption": "Huevos, patatas y embutidos",
+    "source_page": "https://es.restaurantguru.com/Comodo-Garrapinillos",
+    "source_image": "https://img05.restaurantguru.com/r4fe-Comodo-food-2025-06.jpg",
+    "source_photo_id": "104_542813884",
+    "retrieved": "2026-10-22",
+    "sha256": "f89890064e8ae7f78342fbf5502365cf757769b5b6a1df3aebb669107bc4e038",
+    "modified": false
+  },
+  {
+    "file": "assets/ensaladilla.jpg",
+    "caption": "Ensaladilla",
+    "source_page": "https://es.restaurantguru.com/Comodo-Garrapinillos",
+    "source_image": "https://img05.restaurantguru.com/r755-meals-Comodo-2025-06.jpg",
+    "source_photo_id": "104_549600753",
+    "retrieved": "2026-10-22",
+    "sha256": "d9d90e1486c091e903abb103203cc254f430bfa831be4becdb6022fd19658e35",
+    "modified": false
+  },
+  {
+    "file": "assets/pescado.jpg",
+    "caption": "Pescado con almejas",
+    "source_page": "https://es.restaurantguru.com/Comodo-Garrapinillos",
+    "source_image": "https://img05.restaurantguru.com/rff6-Comodo-food-2025-06-2.jpg",
+    "source_photo_id": "104_558143027",
+    "retrieved": "2026-10-22",
+    "sha256": "2c2175e24063881ce0930e989e1447af4de5295bced83a2277ae65219bb80646",
+    "modified": false
+  },
+  {
+    "file": "assets/pulpo.jpg",
+    "caption": "Pulpo con guarnición",
+    "source_page": "https://es.restaurantguru.com/Comodo-Garrapinillos",
+    "source_image": "https://img05.restaurantguru.com/r669-Comodo-dishes-2025-06.jpg",
+    "source_photo_id": "104_549600751",
+    "retrieved": "2026-10-22",
+    "sha256": "0a38c329387df19d98b0e142fd05c0b9e03e43dfc8faa08e534523ea3fcda3f3",
+    "modified": false
+  },
+  {
+    "file": "assets/arroz.jpg",
+    "caption": "Arroz cremoso",
+    "source_page": "https://es.restaurantguru.com/Comodo-Garrapinillos",
+    "source_image": "https://img05.restaurantguru.com/rb88-food-Comodo-2025-06.jpg",
+    "source_photo_id": "104_549600752",
+    "retrieved": "2026-10-22",
+    "sha256": "6c901e4463763371e28610360673d73fb32ddde8bb93467ae8729389a73a56c7",
+    "modified": false
+  },
+  {
+    "file": "assets/aguacate.jpg",
+    "caption": "Un toque fresco",
+    "source_page": "https://es.restaurantguru.com/Comodo-Garrapinillos",
+    "source_image": "https://img05.restaurantguru.com/r9c2-Comodo-meals-2025-06-1.jpg",
+    "source_photo_id": "104_558143022",
+    "retrieved": "2026-10-22",
+    "sha256": "7299bceed97b6553cbd87115e1bdcd58457cf65085b283c3def2b17b3859974c",
+    "modified": false
+  },
+  {
+    "file": "assets/tarta-queso.jpg",
+    "caption": "Tarta de queso",
+    "source_page": "https://es.restaurantguru.com/Comodo-Garrapinillos",
+    "source_image": "https://img05.restaurantguru.com/r614-Comodo-cheesecake.jpg",
+    "source_photo_id": "104_558143029",
+    "retrieved": "2026-10-22",
+    "sha256": "56e60fb5cf28a9f80a6e2c638f6d6f41c63dd27edf2aca49a478c9f8712ef2ea",
+    "modified": false
+  },
+  {
+    "file": "assets/tarta-pera.jpg",
+    "caption": "Un final dulce",
+    "source_page": "https://es.restaurantguru.com/Comodo-Garrapinillos",
+    "source_image": "https://img05.restaurantguru.com/r3a3-Comodo-meals-2025-06-2.jpg",
+    "source_photo_id": "104_558143028",
+    "retrieved": "2026-10-22",
+    "sha256": "5abafb78631e6febc5ef189f7ce0b8bdbf21de10485a1a513d0b0d97fb048b41",
+    "modified": false
+  }
+]
