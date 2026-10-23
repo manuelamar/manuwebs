@@ -28,7 +28,7 @@ Verificación interna: `curl -f http://127.0.0.1:8000/` y `node --check app.js`.
 - Jueves: 08:00–23:00.
 - Viernes y sábado: 08:00–01:00 del día siguiente.
 - Domingo: cerrado.
-- Terraza y espacio ideal para ver deportes.
+- Servicio de terraza y posibilidad de ver deportes.
 
 La web incluye una sección para reservar mesa por teléfono, accesos desde la portada, la navegación y la barra móvil, enlaces para llamar, indicaciones de Google Maps, horario semanal, galería ampliable, navegación móvil y una carta real de 30 opciones con precios, ingredientes y filtros por categoría. El día del horario se destaca usando Europe/Madrid. El estado abierto/cerrado se calcula con el horario semanal publicado; no consulta cierres extraordinarios ni disponibilidad de mesas.
 
@@ -62,7 +62,7 @@ Los originales sin editar se conservan como fuente de transcripción en `assets/
 
 ## Navegación por secciones
 
-La cabecera permanece visible e incluye enlaces a Inicio, El bar, Carta, Fotos, Terraza y deportes, Contacto y horarios, y Reservas. En móvil y tablet se abre mediante un botón «Menú», se cierra al elegir una sección o pulsar Escape y destaca la sección visible. Las anclas respetan la altura de la cabecera.
+La cabecera permanece visible e incluye enlaces a Inicio, El bar, Carta, Fotos, Contacto y horarios, y Reservas. El servicio de terraza y la posibilidad de ver deportes se indican en la presentación del bar y en los datos de contacto, sin sección ni entrada propia en el menú. En móvil y tablet se abre mediante un botón «Menú», se cierra al elegir una sección o pulsar Escape y destaca la sección visible. Las anclas respetan la altura de la cabecera.
 
 ## Mejoras de octubre de 2026
 
@@ -71,4 +71,4 @@ La cabecera permanece visible e incluye enlaces a Inicio, El bar, Carta, Fotos, 
 - Metadatos Open Graph y Twitter con URL pública y tarjeta JPEG de 1200 × 630 (`assets/social-card.jpg`), compuesta con fotografía real del local. Las plataformas pueden conservar su vista previa anterior en caché.
 - Todas las imágenes cargadas por la web están optimizadas. Peso total de imágenes referenciadas reducido de 6.693.824 a 1.481.849 bytes (77,9 %). La foto de portada tiene prioridad alta; las fotos inferiores se cargan al acercarse a ellas.
 
-Se comprobaron límites de horario (incluidas las 00:30 y 01:00 del domingo), cambio de hora, visitantes de otra zona horaria, actualización automática, filtros y 30 platos, siete enlaces de navegación a cuatro tamaños de pantalla, galería con fuentes, reservas solo por llamada y apertura sin red del HTML y de la carpeta exportados.
+Se comprobaron límites de horario (incluidas las 00:30 y 01:00 del domingo), cambio de hora, visitantes de otra zona horaria, actualización automática, filtros y 30 platos, seis enlaces de navegación en móvil y ordenador, galería con fuentes, reservas solo por llamada y apertura sin red del HTML y de la carpeta exportados.
