@@ -7,7 +7,9 @@
     "source_photo_id": "104_542813884",
     "retrieved": "2026-10-22",
     "sha256": "f89890064e8ae7f78342fbf5502365cf757769b5b6a1df3aebb669107bc4e038",
-    "modified": false
+    "modified": false,
+    "optimized_file": "assets/huevos.webp",
+    "optimization": "Conversión a WebP, calidad 82, mismas dimensiones y contenido; original conservado."
   },
   {
     "file": "assets/ensaladilla.jpg",
@@ -17,7 +19,9 @@
     "source_photo_id": "104_549600753",
     "retrieved": "2026-10-22",
     "sha256": "d9d90e1486c091e903abb103203cc254f430bfa831be4becdb6022fd19658e35",
-    "modified": false
+    "modified": false,
+    "optimized_file": "assets/ensaladilla.webp",
+    "optimization": "Conversión a WebP, calidad 82, mismas dimensiones y contenido; original conservado."
   },
   {
     "file": "assets/pescado.jpg",
@@ -27,7 +31,9 @@
     "source_photo_id": "104_558143027",
     "retrieved": "2026-10-22",
     "sha256": "2c2175e24063881ce0930e989e1447af4de5295bced83a2277ae65219bb80646",
-    "modified": false
+    "modified": false,
+    "optimized_file": "assets/pescado.webp",
+    "optimization": "Conversión a WebP, calidad 82, mismas dimensiones y contenido; original conservado."
   },
   {
     "file": "assets/pulpo.jpg",
@@ -37,7 +43,9 @@
     "source_photo_id": "104_549600751",
     "retrieved": "2026-10-22",
     "sha256": "0a38c329387df19d98b0e142fd05c0b9e03e43dfc8faa08e534523ea3fcda3f3",
-    "modified": false
+    "modified": false,
+    "optimized_file": "assets/pulpo.webp",
+    "optimization": "Conversión a WebP, calidad 82, mismas dimensiones y contenido; original conservado."
   },
   {
     "file": "assets/arroz.jpg",
@@ -47,7 +55,9 @@
     "source_photo_id": "104_549600752",
     "retrieved": "2026-10-22",
     "sha256": "6c901e4463763371e28610360673d73fb32ddde8bb93467ae8729389a73a56c7",
-    "modified": false
+    "modified": false,
+    "optimized_file": "assets/arroz.webp",
+    "optimization": "Conversión a WebP, calidad 82, mismas dimensiones y contenido; original conservado."
   },
   {
     "file": "assets/aguacate.jpg",
@@ -57,7 +67,9 @@
     "source_photo_id": "104_558143022",
     "retrieved": "2026-10-22",
     "sha256": "7299bceed97b6553cbd87115e1bdcd58457cf65085b283c3def2b17b3859974c",
-    "modified": false
+    "modified": false,
+    "optimized_file": "assets/aguacate.webp",
+    "optimization": "Conversión a WebP, calidad 82, mismas dimensiones y contenido; original conservado."
   },
   {
     "file": "assets/tarta-queso.jpg",
@@ -67,7 +79,9 @@
     "source_photo_id": "104_558143029",
     "retrieved": "2026-10-22",
     "sha256": "56e60fb5cf28a9f80a6e2c638f6d6f41c63dd27edf2aca49a478c9f8712ef2ea",
-    "modified": false
+    "modified": false,
+    "optimized_file": "assets/tarta-queso.webp",
+    "optimization": "Conversión a WebP, calidad 82, mismas dimensiones y contenido; original conservado."
   },
   {
     "file": "assets/tarta-pera.jpg",
@@ -77,6 +91,44 @@
     "source_photo_id": "104_558143028",
     "retrieved": "2026-10-22",
     "sha256": "5abafb78631e6febc5ef189f7ce0b8bdbf21de10485a1a513d0b0d97fb048b41",
-    "modified": false
+    "modified": false,
+    "optimized_file": "assets/tarta-pera.webp",
+    "optimization": "Conversión a WebP, calidad 82, mismas dimensiones y contenido; original conservado."
+  },
+  {
+    "file": "assets/fachada.jpg",
+    "caption": "Fachada de Cheff Cómodo",
+    "source_page": "https://es.restaurantguru.com/Comodo-Garrapinillos",
+    "source_image": "https://img05.restaurantguru.com/r592-Comodo-interior-2021-08.jpg",
+    "source_photo_id": "104_505681902",
+    "retrieved": "2026-10-23",
+    "sha256": "ee63fad4747937eaf10290ad8022b43da8877559dbba774075029f96d07fc2d4",
+    "modified": false,
+    "optimized_file": "assets/fachada.webp",
+    "optimization": "Conversión a WebP, calidad 82, mismas dimensiones y contenido; original conservado."
+  },
+  {
+    "file": "assets/terraza.jpg",
+    "caption": "Terraza de Cheff Cómodo",
+    "source_page": "https://es.restaurantguru.com/Comodo-Garrapinillos",
+    "source_image": "https://img05.restaurantguru.com/r14e-Comodo-interior.jpg",
+    "source_photo_id": "104_505681904",
+    "retrieved": "2026-10-23",
+    "sha256": "5fe455f5d1a2a1517a5854915fe27981e23ab08fd926a2f409259acec8849c42",
+    "modified": false,
+    "optimized_file": "assets/terraza.webp",
+    "optimization": "Conversión a WebP, calidad 82, mismas dimensiones y contenido; original conservado."
+  },
+  {
+    "file": "assets/bocadillo.jpg",
+    "caption": "Bocadillo de Cheff Cómodo",
+    "source_page": "https://es.restaurantguru.com/Comodo-Garrapinillos",
+    "source_image": "https://img05.restaurantguru.com/r826-Comodo-food-2021-08.jpg",
+    "source_photo_id": "104_509496465",
+    "retrieved": "2026-10-23",
+    "sha256": "62891540cd544d11819423fabe0c700b3388de0f34b32e0e909b9d63a897dabd",
+    "modified": false,
+    "optimized_file": "assets/bocadillo.webp",
+    "optimization": "Conversión a WebP, calidad 82, mismas dimensiones y contenido; original conservado."
   }
 ]

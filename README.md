@@ -30,15 +30,15 @@ Verificación interna: `curl -f http://127.0.0.1:8000/` y `node --check app.js`.
 - Domingo: cerrado.
 - Terraza y espacio ideal para ver deportes.
 
-La web incluye una sección para reservar mesa por teléfono, accesos desde la portada, la navegación y la barra móvil, enlaces para llamar, indicaciones de Google Maps, horario semanal, galería ampliable, navegación móvil y una carta real de 30 opciones con precios, ingredientes y filtros por categoría. El día del horario se destaca usando Europe/Madrid; no se afirma disponibilidad en tiempo real.
+La web incluye una sección para reservar mesa por teléfono, accesos desde la portada, la navegación y la barra móvil, enlaces para llamar, indicaciones de Google Maps, horario semanal, galería ampliable, navegación móvil y una carta real de 30 opciones con precios, ingredientes y filtros por categoría. El día del horario se destaca usando Europe/Madrid. El estado abierto/cerrado se calcula con el horario semanal publicado; no consulta cierres extraordinarios ni disponibilidad de mesas.
 
 ## Imágenes
 
-Los adjuntos se podían ver en el chat pero no estaban disponibles como archivos originales en el entorno. `assets/logo.png`, `assets/cristalera.png` y `assets/gallery.png` son versiones adaptadas mediante generación de imagen a partir de los adjuntos. No son los archivos originales y pueden tener diferencias. La web lo indica. Sustituir por los originales antes de la versión definitiva. Solo las imágenes adaptadas del local usan cuadrantes del archivo gallery.png. Las fotografías de platos son archivos JPEG individuales, sin generar ni retocar, descargados de la galería pública de Cheff Cómodo en Restaurant Guru; se ha contrastado el negocio por dirección y teléfono. Se conservan las marcas que contiene la fuente. assets/photo-sources.json registra la página, URL de imagen, identificador y hash de cada archivo. La galería y cada ampliación enlazan a la fuente. No implican disponibilidad actual de esos platos.
+El logo sigue siendo una versión adaptada del adjunto (`assets/logo.png`), convertida a WebP de 192 px para mostrarlo en cabecera y pie. Las fotografías visibles de fachada, terraza y platos proceden de la galería pública del propio bar en Restaurant Guru; se contrastó el negocio por dirección y teléfono. Las fotos de la fachada y terraza sustituyen las anteriores versiones generadas. Se conservan los JPEG originales y las marcas de la fuente. Los WebP mantienen dimensiones y contenido, con compresión de calidad 82. `assets/photo-sources.json` registra la fuente, identificador, hash del original y derivado utilizado. Las ampliaciones muestran la imagen completa y enlazan a su fuente. Estas fotos no implican disponibilidad actual de todos los platos. Los PNG antiguos del local se conservan como archivo, sin cargarlos ni incluirlos en las descargas actuales.
 
 ## Pendiente
 
-Información de alérgenos y archivos originales del logo y de las fotografías adaptadas del local. La carta y los precios ya están transcritos de las dos fotografías facilitadas por el usuario. Las reservas se gestionan exclusivamente por llamada al 976 97 95 85. No hay agenda, formulario ni recogida de solicitudes en la web. Los horarios de cocina y la disponibilidad se confirman con el bar. La web de referencia no se pudo consultar por la política de red.
+Información de alérgenos y archivo original del logo. La carta y los precios ya están transcritos de las dos fotografías facilitadas por el usuario. Las reservas se gestionan exclusivamente por llamada al 976 97 95 85. No hay agenda, formulario ni recogida de solicitudes en la web. Los horarios de cocina y la disponibilidad se confirman con el bar. La web de referencia no se pudo consultar por la política de red.
 
 ## Facebook
 
@@ -63,3 +63,12 @@ Los originales sin editar se conservan como fuente de transcripción en `assets/
 ## Navegación por secciones
 
 La cabecera permanece visible e incluye enlaces a Inicio, El bar, Carta, Fotos, Terraza y deportes, Contacto y horarios, y Reservas. En móvil y tablet se abre mediante un botón «Menú», se cierra al elegir una sección o pulsar Escape y destaca la sección visible. Las anclas respetan la altura de la cabecera.
+
+## Mejoras de octubre de 2026
+
+- Tres destacados con precios derivados de `assets/menu.json`: ensaladilla del chef (8,50 €), huevos rotos (11,50 €) y categoría bocadillos desde el precio mínimo de 8,00 €. La foto de bocadillo ilustra la categoría, sin atribuirle una receta concreta.
+- Estado de apertura calculado en `Europe/Madrid`, actualizado cada minuto y al regresar a la pestaña. Respeta cierres de madrugada, domingo y cambio de hora; muestra el próximo inicio de horario. Es horario de apertura del bar, no de cocina.
+- Metadatos Open Graph y Twitter con URL pública y tarjeta JPEG de 1200 × 630 (`assets/social-card.jpg`), compuesta con fotografía real del local. Las plataformas pueden conservar su vista previa anterior en caché.
+- Todas las imágenes cargadas por la web están optimizadas. Peso total de imágenes referenciadas reducido de 6.693.824 a 1.481.849 bytes (77,9 %). La foto de portada tiene prioridad alta; las fotos inferiores se cargan al acercarse a ellas.
+
+Se comprobaron límites de horario (incluidas las 00:30 y 01:00 del domingo), cambio de hora, visitantes de otra zona horaria, actualización automática, filtros y 30 platos, siete enlaces de navegación a cuatro tamaños de pantalla, galería con fuentes, reservas solo por llamada y apertura sin red del HTML y de la carpeta exportados.

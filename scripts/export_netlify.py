@@ -12,7 +12,7 @@ html = (ROOT / 'index.html').read_text()
 css = (ROOT / 'styles.css').read_text()
 assets = set(re.findall(r'''(?:src|href)=["'](assets/[^"']+)["']''', html))
 assets.update(re.findall(r'''url\(["']?(assets/[^\s)"']+)["']?\)''', css))
-assets.update(['assets/photo-sources.json', 'assets/menu.json'])
+assets.update(['assets/photo-sources.json', 'assets/menu.json', 'assets/social-card.jpg'])
 files = ['index.html', 'styles.css', 'app.js', *sorted(assets)]
 for name in files:
     source = (ROOT / name).resolve()
@@ -36,7 +36,7 @@ También puedes abrir index.html localmente después de descomprimir toda la car
 
 Contenido: HTML, CSS, JavaScript, imágenes, fuentes de las fotos y netlify.toml.
 Reservas únicamente por llamada al 976 97 95 85.
-Las fotos de platos enlazan a su fuente. Logo e imágenes del local son versiones adaptadas.
+Las fotografías reales de platos y local enlazan a su fuente. El logo es una versión adaptada.
 ''')
 files.extend(['netlify.toml', 'LEEME-NETLIFY.txt'])
 archive = ROOT / 'cheff-comodo-netlify.zip'

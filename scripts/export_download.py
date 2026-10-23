@@ -16,11 +16,6 @@ def inline_asset(name):
 html = (ROOT / 'index.html').read_text()
 css = (ROOT / 'styles.css').read_text()
 assert '@import' not in css, 'Download must not depend on remote stylesheets'
-# Keep embedded images out of custom properties: browsers cap expanded variable
-# values, so a multi-megabyte data URL can otherwise silently lose the image.
-css, gallery_declarations = re.subn(r':root\{--gallery-image:url\("assets/gallery.png"\)\}', '', css)
-assert gallery_declarations == 1, 'Gallery variable declaration changed'
-css = css.replace('var(--gallery-image)', 'url("' + inline_asset('assets/gallery.png') + '")')
 css = re.sub(r'''url\(["']?(assets/[^\s\)"']+)["']?\)''', lambda m: 'url("' + inline_asset(m[1]) + '")', css)
 html, stylesheet_count = re.subn(r'<link rel="stylesheet" href="styles\.css(?:\?[^"]*)?">', lambda _: '<style>' + css + '</style>', html)
 html, script_count = re.subn(r'<script src="app\.js(?:\?[^"]*)?" defer></script>', '', html)

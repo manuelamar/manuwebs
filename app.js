@@ -27,11 +27,49 @@ document.querySelectorAll('.filter').forEach(button => {
   });
 });
 document.querySelector('#year').textContent = new Date().getFullYear();
-// Destaca el día local del negocio, también si el visitante está en otra zona.
-const localWeekday = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Madrid', weekday: 'short' }).format(new Date());
-const businessDay = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(localWeekday);
-const todayRow = document.querySelector(`.opening-hours [data-day="${businessDay}"]`);
-if (todayRow) todayRow.classList.add('today');
+// Horario facilitado por el bar. Minutos desde medianoche; 1500 = 01:00 del día siguiente.
+const openingHours = [null, [480, 1020], [480, 1020], [480, 1020], [480, 1380], [480, 1500], [480, 1500]];
+const madridClock = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'Europe/Madrid', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+});
+const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const dayNames = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+function formatTime(minutes) {
+  return `${String(Math.floor(minutes / 60) % 24).padStart(2, '0')}:${String(minutes % 60).padStart(2, '0')}`;
+}
+function getOpeningStatus(date = new Date()) {
+  const parts = Object.fromEntries(madridClock.formatToParts(date).map(part => [part.type, part.value]));
+  const day = weekdays.indexOf(parts.weekday);
+  const minute = Number(parts.hour) * 60 + Number(parts.minute);
+  // Comprobar ayer permite que el domingo a las 00:30 siga contando como abierto el sábado.
+  for (const offset of [-1, 0]) {
+    const hours = openingHours[(day + offset + 7) % 7];
+    if (hours && minute >= offset * 1440 + hours[0] && minute < offset * 1440 + hours[1]) {
+      return { day, state: 'open', text: `Abierto ahora · Cerramos a las ${formatTime(hours[1])}` };
+    }
+  }
+  for (let offset = 0; offset < 8; offset++) {
+    const nextDay = (day + offset) % 7;
+    const hours = openingHours[nextDay];
+    if (hours && (offset > 0 || minute < hours[0])) {
+      const when = offset === 0 ? 'hoy' : offset === 1 ? 'mañana' : `el ${dayNames[nextDay]}`;
+      return { day, state: 'closed', text: `Cerrado · Abrimos ${when} a las ${formatTime(hours[0])}` };
+    }
+  }
+}
+function updateOpeningStatus() {
+  const status = getOpeningStatus();
+  document.querySelectorAll('[data-opening-status]').forEach(element => {
+    if (element.textContent !== status.text) element.textContent = status.text;
+    element.dataset.state = status.state;
+  });
+  document.querySelectorAll('.opening-hours [data-day]').forEach(row => {
+    row.classList.toggle('today', Number(row.dataset.day) === status.day);
+  });
+}
+updateOpeningStatus();
+setInterval(updateOpeningStatus, 60000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) updateOpeningStatus(); });
 const photoDialog = document.querySelector('.photo-dialog');
 const enlargedPhoto = document.querySelector('.dialog-photo');
 let lastPhotoButton;
