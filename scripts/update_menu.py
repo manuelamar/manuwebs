@@ -13,7 +13,7 @@ def euro(cents):
     return f'{cents // 100},{cents % 100:02d} €'
 
 parts = ['''<section id="carta" class="menu-section section" aria-labelledby="menu-title">
-<div class="section-heading"><div><p class="eyebrow">LA CARTA DE CHEFF CÓMODO</p><h2 id="menu-title">ELIGE A TU GUSTO.<br><em>LO DEMÁS ES DISFRUTAR.</em></h2></div><p>Bocadillos, hamburguesas y mucho más.<br>Encuentra tu próximo favorito.</p></div>
+<div class="section-heading"><div><p class="eyebrow">LA CARTA DE CHEFF CÓMODO</p><h2 id="menu-title">Para todos los gustos.<br><em>Y todos esos ratos.</em></h2></div><p>Bocadillos, hamburguesas y mucho más.<br>Encuentra tu próximo favorito.</p></div>
 ''']
 items_by_name = {item['name']: item for category in categories for item in category['items']}
 featured = [
