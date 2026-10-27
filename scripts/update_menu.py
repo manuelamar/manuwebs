@@ -13,7 +13,7 @@ def euro(cents):
     return f'{cents // 100},{cents % 100:02d} €'
 
 parts = ['''<section id="carta" class="menu-section section" aria-labelledby="menu-title">
-<div class="section-heading"><div><p class="eyebrow">LA CARTA DE CHEFF CÓMODO</p><h2 id="menu-title">Para todos los gustos.<br><em>Y todos esos ratos.</em></h2></div><p>Bocadillos, hamburguesas y mucho más.<br>Encuentra tu próximo favorito.</p></div>
+<div class="section-heading"><div><p class="eyebrow">LA CARTA DE CHEFF CÓMODO</p><h2 id="menu-title">ELIGE A TU GUSTO.<br><em>LO DEMÁS ES DISFRUTAR.</em></h2></div><p>Bocadillos, hamburguesas y mucho más.<br>Encuentra tu próximo favorito.</p></div>
 ''']
 items_by_name = {item['name']: item for category in categories for item in category['items']}
 featured = [
@@ -24,6 +24,7 @@ featured = [
     ('Bocadillos', min(item['price_cents'] for category in categories if category['id'] == 'bocadillos' for item in category['items']),
      'bocadillo', 900, 'Ramos, Busquets, Del Bosque y más. Elige el tuyo en la carta.', True),
 ]
+parts.append('<details class="content-disclosure" id="menu-disclosure"><summary><span class="disclosure-show">Ver carta y precios</span><span class="disclosure-hide">Ocultar carta</span><span class="disclosure-icon" aria-hidden="true">+</span></summary><div class="disclosure-content" id="menu-disclosure-content">')
 parts.append('<h3 class="featured-heading">PARA IR ABRIENDO BOCA</h3><div class="featured-grid" aria-label="Destacados de la carta">')
 for title, cents, photo, height, description, starting_price in featured:
     qualifier = '<small>Desde</small>' if starting_price else ''
@@ -41,6 +42,7 @@ for index, category in enumerate(categories, 1):
         parts.append(f'<li class="menu-item"><div class="menu-item-copy"><h4>{escape(item["name"])}</h4>{description}</div><span class="menu-price" data-cents="{item["price_cents"]}">{euro(item["price_cents"])}</span></li>')
     parts.append('</ul></section>')
 parts.append('''</div><p class="menu-note">Precios según la carta facilitada por el bar. Consulta la disponibilidad y la información de alérgenos antes de pedir.</p>
+</div></details>
 </section>
 ''')
 path = ROOT / 'index.html'

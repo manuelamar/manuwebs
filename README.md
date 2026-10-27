@@ -1,6 +1,6 @@
 # Cheff Cómodo · Web del bar
 
-Web estática adaptable a móvil. Diseño actual en crema y burdeos, títulos de estilo editorial con Georgia, texto de lectura en Arial, fotografías reales y accesos a reservas. HTML, CSS y JavaScript, sin dependencias de compilación.
+Web estática adaptable a móvil. Diseño actual con tipografía de palo seco, negro y rojo teja, fotografías grandes y accesos a reservas. HTML, CSS y JavaScript, sin dependencias de compilación.
 
 ## Descargar y abrir
 
@@ -73,8 +73,6 @@ La cabecera permanece visible e incluye enlaces a Inicio, El bar, Carta, Fotos, 
 
 Se comprobaron límites de horario (incluidas las 00:30 y 01:00 del domingo), cambio de hora, visitantes de otra zona horaria, actualización automática, filtros y 30 platos, seis enlaces de navegación en móvil y ordenador, galería con fuentes, reservas solo por llamada y apertura sin red del HTML y de la carpeta exportados.
 
-## Aspecto cálido y nueva portada
+## Carta y fotos desplegables
 
-Portada con fotografía real de huevos rotos, precio de la carta, acceso directo a la carta y llamada para reservar. Paleta crema, carbón cálido y burdeos; títulos con Georgia (serif de sistema) y cuerpo en Arial, sin descargar fuentes externas. La carta usa separadores finos, cifras alineadas y filtros redondeados. La galería muestra fotografías completas en marcos del mismo tamaño y pies de foto fuera de la imagen. Las transiciones suaves respetan `prefers-reduced-motion`. Terraza y deportes siguen apareciendo solo como información de servicios, sin entrada en el menú.
-
-Comprobado a 1440, 1100, 900, 760, 390, 360 y 320 px: navegación, ausencia de desbordamientos, carta con los 30 nombres y precios del JSON, filtros, galería ampliable, horarios y reservas solo por llamada. Descargas HTML y ZIP regeneradas con el mismo diseño; HTML comprobado con todas las peticiones de red bloqueadas.
+Se conserva el diseño de la versión `01460bf` (negro y rojo teja, portada con fachada), elegido por el usuario. La carta y la galería están cerradas al cargar y solo muestran el contenido al activar «Ver carta y precios» o «Ver fotos del bar». Son desplegables nativos `details`/`summary`: funcionan con ratón, pantalla táctil y teclado, incluso sin JavaScript. Se pueden abrir o cerrar por separado. Los enlaces de la cabecera llevan al apartado sin abrirlo automáticamente. Los 30 platos con precios, filtros y destacados permanecen dentro del desplegable de la carta; las diez fotos y su ampliación, dentro del de la galería. La regeneración de la carta conserva el desplegable.
