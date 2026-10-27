@@ -51,3 +51,19 @@ html{scroll-padding-top:120px}.header{z-index:30}.site-navigation{gap:18px;font-
 .content-disclosure[open]>summary .disclosure-icon{transform:rotate(45deg)}
 .disclosure-content{padding-top:20px}
 @media(max-width:440px){.content-disclosure>summary{padding:15px 16px;font-size:13px}.disclosure-content{padding-top:12px}}
+
+/* Información permanente sobre cookies, sin añadir almacenamiento ni consentimiento ficticio. */
+.legal-disclosure{width:100%;border-top:1px solid var(--line);padding-top:18px}
+.legal-disclosure>summary{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:44px;padding:8px 0;list-style:none;cursor:pointer;font-size:12px;font-weight:600;color:var(--ink)}
+.legal-disclosure>summary::-webkit-details-marker{display:none}
+.legal-disclosure>summary::marker{content:''}
+.legal-toggle{display:grid;place-items:center;width:25px;height:25px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;font-size:20px;font-weight:400;color:var(--orange)}
+.legal-disclosure[open] .legal-toggle{transform:rotate(45deg)}
+.legal-copy{max-width:900px;padding:22px 0 6px;font-size:13px;line-height:1.9;color:var(--muted);overflow-wrap:anywhere}
+.legal-copy h2{font-size:25px;line-height:1.25;letter-spacing:-.5px;margin:0 0 12px;color:var(--ink)}
+.legal-copy h3{font-size:15px;line-height:1.5;margin:24px 0 9px;color:var(--ink)}
+.legal-copy p{margin:0 0 12px}
+.legal-copy .legal-updated{font-size:11px}
+.legal-copy a{text-decoration:underline;text-underline-offset:3px;color:var(--ink)}
+.legal-copy .legal-sources{border-top:1px solid var(--line);padding-top:18px;margin-top:24px;font-size:11px}
+@media(max-width:440px){.legal-copy{font-size:12px}.legal-copy h2{font-size:22px}.legal-copy h3{font-size:14px}}

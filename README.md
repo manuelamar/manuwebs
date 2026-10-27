@@ -76,3 +76,18 @@ Se comprobaron límites de horario (incluidas las 00:30 y 01:00 del domingo), ca
 ## Carta y fotos desplegables
 
 Se conserva el diseño de la versión `01460bf` (negro y rojo teja, portada con fachada), elegido por el usuario. La carta y la galería están cerradas al cargar y solo muestran el contenido al activar «Ver carta y precios» o «Ver fotos del bar». Son desplegables nativos `details`/`summary`: funcionan con ratón, pantalla táctil y teclado, incluso sin JavaScript. Se pueden abrir o cerrar por separado. Los enlaces de la cabecera llevan al apartado sin abrirlo automáticamente. Los 30 platos con precios, filtros y destacados permanecen dentro del desplegable de la carta; las diez fotos y su ampliación, dentro del de la galería. La regeneración de la carta conserva el desplegable.
+
+## Cookies y documentación legal
+
+Revisión técnica del 27/10/2026: el código no usa cookies, localStorage, sessionStorage, IndexedDB, service workers, analítica, píxeles, fuentes remotas ni contenido de terceros incrustado. Se comprobó la navegación y la apertura de la carta, galería y ampliación en un navegador sobre el código local; los quince recursos solicitados se contrastaron por hash con sus versiones públicas y sus cabeceras HTTPS no incluyeron Set-Cookie. No se han añadido un banner de consentimiento, una cookie de aceptación ni un gestor externo que no correspondan al uso real. El pie contiene «Cookies y navegación», disponible también sin JavaScript y en el HTML autosuficiente.
+
+Las fotos se alojan localmente; Google Maps, Facebook y Restaurant Guru se abren solo al seguir sus enlaces. GitHub Pages registra IP por seguridad según su documentación; no confundir ausencia de cookies con ausencia de todo tratamiento de datos. Si cambia el alojamiento, revisar este texto. Si se añaden analítica o contenidos incrustados no exentos, bloquearlos hasta consentimiento y ofrecer aceptar y rechazar con la misma facilidad; no basta con un aviso informativo.
+
+**Pendiente de datos del titular:** no se ha publicado un aviso legal ni una política de privacidad completa con identidades inventadas. El usuario indica que no conoce la razón social/nombre del responsable, NIF, correo de contacto ni datos registrales. Pedirlos al titular o su gestoría; suelen constar parcialmente en facturas o tickets. Confirmar domicilio del prestador, datos de autorización administrativa y registro cuando correspondan, y si los precios incluyen los impuestos aplicables. Para privacidad, confirmar además quién gestiona las reservas telefónicas, datos recogidos, finalidades, bases jurídicas, plazos de conservación, destinatarios/proveedores, transferencias que procedan y canal de derechos. No asumir plazos ni bases jurídicas sin conocer la operativa. La información técnica de cookies no sustituye esos documentos.
+
+Fuentes oficiales consultadas:
+
+- AEPD, Guía sobre el uso de las cookies, edición mayo de 2024, disponible al revisar: https://www.aepd.es/guias/guia-cookies.pdf .
+- LSSI, información general del artículo 10 y almacenamiento/acceso del artículo 22.2: https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758 .
+- GitHub Pages, recogida de IP por seguridad: https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection .
+- Declaración de privacidad del alojamiento: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement .
